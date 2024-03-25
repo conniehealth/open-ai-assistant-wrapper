@@ -1,9 +1,12 @@
 {
-  "name": "open-ai-assistant",
+  "name": "@conniehealth/open-ai-assistant",
   "version": "1.0.0",
   "description": "A wrapper to make using OpenAI's assistants easier.",
+  "repository": "github:conniehealth/open-ai-assistant-wrapper",
   "main": "lib/index.js",
+  "types": "lib/index.d.ts",
   "scripts": {
+    "clean": "rm -Rf node_modules/ *.js",
     "build": "tsc"
   },
   "author": "Connie Health",
@@ -13,5 +16,8 @@
   },
   "dependencies": {
     "openai": "^4.29.2"
+  },
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com"
   }
 }
