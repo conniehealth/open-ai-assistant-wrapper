@@ -1,0 +1,17 @@
+{
+  "name": "open-ai-assistant",
+  "version": "1.0.0",
+  "description": "A wrapper to make using OpenAI's assistants easier.",
+  "main": "lib/index.js",
+  "scripts": {
+    "build": "tsc"
+  },
+  "author": "Connie Health",
+  "license": "ISC",
+  "devDependencies": {
+    "typescript": "^5.4.3"
+  },
+  "dependencies": {
+    "openai": "^4.29.2"
+  }
+}
