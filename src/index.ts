@@ -4,7 +4,7 @@ import { MessageContent } from 'openai/resources/beta/threads/messages/messages'
 export type OpenAiAction = (arg: Record<string, any>) => string | Promise<string>
 export type OpenAiActionMap = { [k: string]: OpenAiAction }
 
-export class OpenAiAssistant {
+export class OpenAiThreadManager {
   private openai: OpenAI;
   private assistantId: string;
   private actions: OpenAiActionMap;
@@ -49,10 +49,10 @@ export class OpenAiAssistant {
     });
 
     await this.processThreadRun(threadId, runId);
-    return this.getMessages(threadId, message.id, 'text');
+    return this.getThreadMessages(threadId, message.id, 'text');
   }
 
-  async getMessages(
+  async getThreadMessages(
     threadId: string,
     afterId: string | null = null,
     messageType: 'image_file' | 'text' | null = null

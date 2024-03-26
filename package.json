@@ -1,6 +1,6 @@
 {
   "name": "@conniehealth/open-ai-thread-manager",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "A wrapper to make using OpenAI's assistants easier.",
   "repository": "github:conniehealth/open-ai-thread-manager",
   "main": "lib/index.js",
